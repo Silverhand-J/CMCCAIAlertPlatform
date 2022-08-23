@@ -15,6 +15,7 @@ spring:
 
 #mybatis:
 #  mapper-locations: classpath*:mapper/*Mapper.xml
+
 mybatis-plus:
   global-config:
     db-config:
