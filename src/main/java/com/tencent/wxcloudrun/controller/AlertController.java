@@ -1,6 +1,7 @@
 package com.tencent.wxcloudrun.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.tencent.wxcloudrun.config.ApiResponse;
 import com.tencent.wxcloudrun.model.Alert;
 import com.tencent.wxcloudrun.service.IAlertService;
 import com.tencent.wxcloudrun.util.R;
@@ -140,10 +141,16 @@ public class AlertController {
         return new R(alertService.list());
     }
 
+//    //不用MybatisPlus的自定义--查找所有数据
+//    @GetMapping("/findAll")
+//    public R findAll() {
+//        return new R(alertService.getAll());
+//    }
+
     //不用MybatisPlus的自定义--查找所有数据
     @GetMapping("/findAll")
-    public R findAll() {
-        return new R(alertService.getAll());
+    public ApiResponse findAll() {
+        return ApiResponse.ok(alertService.getAll());
     }
 
     //不用MybatisPlus的自定义--查找最新的五个预警
