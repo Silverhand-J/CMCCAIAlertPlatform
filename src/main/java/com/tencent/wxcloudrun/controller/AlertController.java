@@ -141,16 +141,10 @@ public class AlertController {
         return new R(alertService.list());
     }
 
-//    //不用MybatisPlus的自定义--查找所有数据
-//    @GetMapping("/findAll")
-//    public R findAll() {
-//        return new R(alertService.getAll());
-//    }
-
     //不用MybatisPlus的自定义--查找所有数据
     @GetMapping("/findAll")
-    public ApiResponse findAll() {
-        return ApiResponse.ok(alertService.getAll());
+    public R findAll() {
+        return new R(alertService.getAll());
     }
 
     //不用MybatisPlus的自定义--查找最新的五个预警
