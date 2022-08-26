@@ -9,6 +9,7 @@ public class WeChatConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/images/alert/**").addResourceLocations("file:C:\\Users\\sheny\\Documents\\SpringBootProject\\AlertPlatform\\src\\main\\resources\\images\\alert\\");
+        //registry.addResourceHandler("/images/alert/**").addResourceLocations("file:C:\\Users\\sheny\\Documents\\SpringBootProject\\AlertPlatform\\src\\main\\resources\\images\\alert\\");
+        registry.addResourceHandler("/images/alert/**").addResourceLocations("cloud://prod-5gnx10yqaf146663.7072-prod-5gnx10yqaf146663-1313374168/images/alert/");
     }
 }
