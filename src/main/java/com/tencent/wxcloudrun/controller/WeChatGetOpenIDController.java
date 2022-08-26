@@ -36,6 +36,7 @@ public class WeChatGetOpenIDController {
         }
 
         System.out.println("-----------------------------------");
+        System.out.println(code);
         System.out.println(result);
 
         JSONObject jsonObject = JSONUtil.parseObj(result);
