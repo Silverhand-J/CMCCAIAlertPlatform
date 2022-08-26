@@ -10,6 +10,5 @@ public class WeChatConfigurer implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         //registry.addResourceHandler("/images/alert/**").addResourceLocations("file:C:\\Users\\sheny\\Documents\\SpringBootProject\\AlertPlatform\\src\\main\\resources\\images\\alert\\");
-        registry.addResourceHandler("/images/alert/**").addResourceLocations("/images/alert/");
     }
 }
