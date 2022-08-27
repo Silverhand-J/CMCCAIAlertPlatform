@@ -129,16 +129,16 @@ public class AlertController {
         return new R(alertService.getById(id));
     }
 
-    //不用MybatisPlus的自定义--查找特定数据
-    @GetMapping("/find/{equipmentID}/{time}")
-    public R findByEquipmentIDTime(@PathVariable String equipmentID, @PathVariable String time) {
-        return new R(alertService.getByEquipmentIDTime(equipmentID, time));
-    }
-
     //查找所有数据
     @GetMapping("/findAllNoOrder")
     public R findAllNoOrder() {
         return new R(alertService.list());
+    }
+
+    //不用MybatisPlus的自定义--查找特定数据
+    @GetMapping("/find/{equipmentID}/{time}")
+    public R findByEquipmentIDTime(@PathVariable String equipmentID, @PathVariable String time) {
+        return new R(alertService.getByEquipmentIDTime(equipmentID, time));
     }
 
     //不用MybatisPlus的自定义--查找所有数据
