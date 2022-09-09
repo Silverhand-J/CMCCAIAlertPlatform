@@ -61,7 +61,7 @@ public class WeChatSendMessageController {
 
             //请求微信服务器，推送模板消息-云托管
             //String accessToken = getAccessToken();
-            post = HttpUtil.post("https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=ACCESS_TOKEN", message.toString());
+            post = HttpUtil.post("https://api.weixin.qq.com/cgi-bin/message/subscribe/send", message.toString());
         }
         return post;
     }
