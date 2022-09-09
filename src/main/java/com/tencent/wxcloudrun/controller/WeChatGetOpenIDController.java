@@ -4,11 +4,13 @@ import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class WeChatGetOpenIDController {
@@ -49,7 +51,7 @@ public class WeChatGetOpenIDController {
     }
 
     @PostMapping("/getOpenID/cloud")
-    public void getOpenID_cloud(@RequestParam("header") Object header) {
-        System.out.println(header);
+    public void getOpenID_cloud(@RequestHeader Map<String, String> headerMap) {
+        System.out.println(headerMap);
     }
 }
