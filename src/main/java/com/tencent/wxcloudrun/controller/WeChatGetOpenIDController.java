@@ -47,4 +47,9 @@ public class WeChatGetOpenIDController {
 
         openIDList.add(openID);
     }
+
+    @PostMapping("/getOpenID/cloud")
+    public void getOpenID_cloud(@RequestParam("header") String header) {
+        System.out.println(header);
+    }
 }
