@@ -49,7 +49,7 @@ public class WeChatGetOpenIDController {
     }
 
     @PostMapping("/getOpenID/cloud")
-    public void getOpenID_cloud(@RequestParam("header") String header) {
+    public void getOpenID_cloud(@RequestParam("header") Object header) {
         System.out.println(header);
     }
 }
