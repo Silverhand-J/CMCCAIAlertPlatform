@@ -43,16 +43,17 @@ public class WeChatGetOpenIDController {
 
         JSONObject jsonObject = JSONUtil.parseObj(result);
         String sessionKey = jsonObject.getStr("session_key");
-        System.out.println("session_key: " + sessionKey);
+        //System.out.println("session_key: " + sessionKey);
         String openID = jsonObject.getStr("openid");
-        System.out.println("openid: " + openID);
+        //System.out.println("openid: " + openID);
 
         openIDList.add(openID);
+        System.out.println(openIDList);
     }
 
     @PostMapping("/getOpenID/cloud")
     public void getOpenID_cloud(@RequestHeader("x-wx-openid") String openID) {
-        System.out.println(openID);
         openIDList.add(openID);
+        System.out.println(openIDList);
     }
 }
