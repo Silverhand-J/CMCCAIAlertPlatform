@@ -1,7 +1,6 @@
 package com.tencent.wxcloudrun.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.tencent.wxcloudrun.config.ApiResponse;
 import com.tencent.wxcloudrun.model.Alert;
 import com.tencent.wxcloudrun.service.IAlertService;
 import com.tencent.wxcloudrun.util.R;

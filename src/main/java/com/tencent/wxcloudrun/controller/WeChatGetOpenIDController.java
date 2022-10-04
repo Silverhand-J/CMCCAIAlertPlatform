@@ -51,6 +51,7 @@ public class WeChatGetOpenIDController {
         System.out.println(openIDList);
     }
 
+    //根据code获取用户的openid-云托管
     @PostMapping("/getOpenID/cloud")
     public void getOpenID_cloud(@RequestHeader("x-wx-openid") String openID) {
         openIDList.add(openID);
